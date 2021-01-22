@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="widht=device-widht, initial scale=1.0">
+	<meta http-equiv="X-UA" content="ie=edge">
+	<!--Definir faixa de texto dentro de midia(legendas de acordo com o idioma), descrições, etc-->
+	<title>Tag Track</title>
+</head>
+<body>
+	<!--inserindo video com controlador(play)-->
+	<video src="AV1_trailer.mp4" controls width="800">
+	<!--inserindo legenda, kind = tipo, src lang = linguagem do meu arquivo,default=padrão-->
+	<track src="AV1_trailer_pt.vtt" label="Português Brasil" kind="subtitles" srclang="pt" default>
+	<track src="AV1_trailer_jp.vtt" label="Japonês" kind="subtitles" srclang="jp">	
+	</video>
+</body>
+</html>
