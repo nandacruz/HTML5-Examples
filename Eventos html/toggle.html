@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!--redimensionar a tela em dispositivos moveis-->
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <!--Compatibilidade/renderização-->
+    <title>Event:toggle</title>
+
+</head>
+
+<body>
+
+    <details ontoggle="debug(event)">
+        <summary>Event</summary>
+        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Laborum rem cupiditate quia minima! Veniam dolor
+        minus ea aperiam eveniet impedit assumenda, suscipit quae hic cum omnis molestiae porro optio expedita.</p>
+
+    </details>
+    <script>
+
+        function debug(e) {
+
+            console.log('Evento:' + e.type);
+
+        }
+
+    </script>
+
+</body>
+
+</html>
