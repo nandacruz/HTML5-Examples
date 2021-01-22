@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0"><!--redimensionar a tela em dispositivos moveis-->
+	<meta http-equiv="X-UA-Compatible" content="ie=edge"><!--Compatibilidade/renderização-->
+    <title>Event:canplay</title>
+    <style>
+        video{
+            width: 50vw;
+        }
+        
+    </style>
+	
+</head>
+<body>
+    <video src="https://storage.googleapis.com/hcode-public-storage/videos/AV1_trailer.mp4"
+    controls oncanplay="debug(event)">
+    </video>
+	
+	<script>
+		
+		function debug(e)
+		{
+			
+			console.log('Evento:' + e.type);			
+			
+		}
+	</script>
+
+</body>
+</html>

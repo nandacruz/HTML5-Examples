@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0"><!--redimensionar a tela em dispositivos moveis-->
+	<meta http-equiv="X-UA-Compatible" content="ie=edge"><!--Compatibilidade/renderização-->
+	<title>Event:dragleave</title>
+	<style>
+		#drag{
+			width: 30vw;
+			height: 30vw;
+			background-color: orange; 
+		}
+		#target{
+			width: 30vw;
+			height: 30vw;
+			background-color: blue; 
+		}
+
+	</style>
+</head>
+<body>
+	<div id="drag" ondrag="debug(event)" ondragend="debug(event)" draggable="true"></div>
+	<!--dragleave-->
+	<div id="target" ondragleave="debug(event) "ondragenter="debug(event)"></div>
+			
+	<script>
+
+		function debug(e)
+		{
+			console.log('Evento:' + e.type);			
+			
+		}
+	</script>
+
+</body>
+</html>
