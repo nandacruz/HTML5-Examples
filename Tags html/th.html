@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0"><!--redimensionar a tela em dispositivos moveis-->
+	<meta http-equiv="X-UA-Compatible" content="ie=edge"><!--Compatibilidade/renderização-->
+	<link rel="stylesheet" type="text/css" href="table.css">
+	<!--Tfoot = rodapé-->
+	<title>Tag Th</title>
+</head>
+<body>
+	<!--sempre dentro de uma table, depois do thead e tfoot-->
+	<table>
+		<thead>
+			<tr>
+				<!--ordenando colunas de maneira reversa(ainda n esta sendo aplicado nos navegadores)-->
+				<th sorted="reversed">Header 1</th><!--cabeçalho-->
+				<!--abreviação (ainda n esta sendo aplicado nos navegadores)-->
+				<th abbr="Jan">Janeiro</th><!--cabeçalho-->
+				<th>Header 3</th><!--cabeçalho-->
+			</tr>
+		</thead>
+		<!--corpo da tabela-->
+		<tbody>
+		<!--linha-->
+		<tr>
+			<!--celulas-->
+			<td colspan="2">A1</td><!--Mesclando celulas, colspan=2 espaços-->
+			<td>C1</td>
+		</tr>
+		<tr>
+			<td>A2</td>
+			<td rowspan="2">B2</td><!--Mesclando duas linhas-->
+			<td>C2</td>
+		</tr>
+		<tr>
+			<td>A3</td>
+			
+			<td>C3</td>
+		</tr>
+		</tbody>
+		<tfoot>
+			<tr>
+				<td>Footer 1</td>
+				<td>Footer 2</td>
+				<td>Footer 3</td>
+			</tr>
+		</tfoot>
+	</table>
+
+</body>
+</html>
