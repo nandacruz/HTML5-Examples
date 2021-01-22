@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0"><!--redimensionar a tela em dispositivos moveis-->
+	<meta http-equiv="X-UA-Compatible" content="ie=edge"><!--Compatibilidade/renderização-->
+	<!--mensagem de erro-->
+	<title>Event: error</title>
+</head>
+<body>
+	<!--erro proposital para teste-->
+	<img src="ewhfkweh.png" alt="Image" onerror="debug(event)">
+	
+	<script>
+		function debug(e){
+			console.log('Evento:' + e.type);
+			alert('Evento: ' + e.type);
+		}
+	</script>
+
+</body>
+</html>
