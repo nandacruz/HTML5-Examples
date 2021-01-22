@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0"><!--redimensionar a tela em dispositivos moveis-->
+	<meta http-equiv="X-UA-Compatible" content="ie=edge"><!--Compatibilidade/renderização-->
+	<link rel="stylesheet" type="text/css" href="table.css">
+	<!--Criando containers para abri los posteriormente-->
+	<title>Tag Template</title>
+</head>
+<!--error-->
+<body>
+	<template id="tpl-1">
+		<li>{{name}}</li>
+	</template>
+	<ul>
+		
+	</ul>
+	<button type="button">Add</button>
+	<!--criando botão, const template e clonando conteudo-->
+	<script>
+		const btn = document.querySelector('button');
+		const template = document.querySelector('#tpl-1');
+		const ul = document.querySelector('ul');
+
+		btn.AddEventListener('click', e => {
+
+			ul.append(template.content.cloneNode(true));
+
+		});
+	</script>
+</body>
+</html>
