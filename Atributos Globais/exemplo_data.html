@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0"><!--redimensionar a tela em dispositivos moveis-->
+	<meta http-equiv="X-UA-Compatible" content="ie=edge"><!--Compatibilidade/renderização-->
+	<title>data</title>
+</head>
+<body>
+	<ul><!--lista-->
+		<li data-id="1" data-email= "emailusuario@gmail.com">Usuario/Pessoa</li><!--elementos da lista-->
+		<li data-id="1" data-email= "emailusuario@gmail.com">Usuario/Pessoa</li><!--as informações dentro do li serão mostradas no terminal-->
+	</ul>
+	<!--Script de comando/mostrando informações no console-->
+	<script>
+		document.querySelectorAll('li').forEach(liEl => {
+
+			console.log(liEl.dataset.email);
+		});
+		
+	</script>
+	
+</body>
+</html>

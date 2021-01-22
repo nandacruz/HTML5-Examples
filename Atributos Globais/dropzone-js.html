@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0"><!--redimensionar a tela em dispositivos moveis-->
+	<meta http-equiv="X-UA-Compatible" content="ie=edge"><!--Compatibilidade/renderização-->
+	<title>dropzone/arrastável</title>
+	<style>
+		.caixa
+		{
+			width: 100px;
+			height: 100px;
+			background-color: chocolate;
+		}
+
+		.drop
+		{
+			width: 200px;
+			height: 200px;
+			border: blue 1px solid;
+		}
+
+	</style>
+	<title></title>
+</head>
+<body>
+	<div id="c1" class="caixa" draggable="true"></div><!--movendo item-->
+	<div id="c2" class="caixa" draggable="true"></div><!--movendo item-->
+
+	<div class="drop" dropzone="copy"> </div> <!--copiando ou adquirindo o item movido-->
+
+	<!--Selecionando tudo oq esta armazenado em caixa-->
+	<!--Adicionando até não ter mais nenhuma caixa em caixaEl(um evento de cada vez)-->
+	<!--Pegando o texto e copiando,adicionando eventos-->
+	<script>
+		const caixas = document.querySelectorAll('.caixa');
+		const dropZone = document.querySelector('.drop');
+
+		caixas.forEach(caixaEl => {
+			caixaEl.addEventListener('dragstart', e => {
+				e.dataTransfer.setData('Text', e.target.id);
+				console.log(e.target.id);
+			});
+		});
+
+		dropZone.addEventListener('dragover', e => {
+			e.preventDefault();
+		});
+
+		dropZone.addEventListener('drop', e => {
+			const id = e.dataTransfer.getData('Text');
+			const element = document.getElementById(id);
+
+			e.target.appendChild(element);
+		});
+		
+	</script>
+
+</body>
+</html>
+<!--ESSE METODO AINDA NÃO É TOTALMENTE RECONHECIDO PELOS NAVEGADORES ENTÃO PODE NÃO FUNCIONAR EM ALGUNS CASOS-->
